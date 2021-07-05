@@ -1,0 +1,33 @@
+.editPortal {
+  background-color: rgba(229,229,229, 0);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  transition: all 1s ease;
+  z-index: -1;
+
+  &.editPortal--visible {
+    background-color: rgba(229,229,229, 0.75);
+    display: block;
+    z-index: 4000;
+
+    .note-card__container {
+      opacity: 1 !important;
+
+      .note-card__textbox {
+        max-height: 600px;
+      }
+    }
+  }
+
+  .note-card { //TODO: CALC() THIS LATER
+    position: fixed;
+    transition: all 0.20s ease;
+    width: 240px;
+
+    .note-card__container {
+      transition: all 0.20s ease;
+    }
+  }
+}
